@@ -62,7 +62,11 @@ void voters()
          vote();
 
     }
-    printf("do you want to continue this mode \t press 1");
+    else
+    {
+        printf("you are not eligible for voting \n");
+    }
+    printf("press 1 to continue this mode \t ");
     scanf("%d",&h);if((h==1))
     {goto label;}
     else
@@ -84,7 +88,7 @@ void result()
     int max=v[0];int m=0;
     for(int i=0;i<sizeof(v)/sizeof(v[0]);i++)
     {
-        if(v[i]>max)
+        if(v[i]>=max)
         {
             max=v[i];
             m=i;
@@ -93,9 +97,9 @@ void result()
     }
    
     printf("The name of  party \t  \t no of votes gained \n");
-    printf("\t 1.BJP \t \t = \t %d \n ",v[0]);
-    printf("\t 2.BSP \t \t = \t %d \n ",v[1]);
-    printf("\t 3.congress \t = \t %d \n ",v[2]);
+    printf("\t 1.BJP \t  \t  = \t %d \n ",v[0]);
+    printf("\t 2.BSP \t  \t  = \t %d \n ",v[1]);
+    printf("\t 3.congress\t  = \t %d \n ",v[2]);
      switch (m)
     {
     case /* constant-expression */0:
@@ -109,6 +113,7 @@ void result()
         break;
     
     default:
+        printf("no one won");
         break;
     }
 }
