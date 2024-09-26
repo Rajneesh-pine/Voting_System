@@ -17,7 +17,7 @@ void vote(){
       scanf("%d",&d);
       switch (d)
       {
-      case /* constant-expression */1:
+      case 1:
       {
         v[0]++;
         printf("you have sucessfully given your vote \n ");
