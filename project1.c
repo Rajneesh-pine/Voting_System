@@ -141,8 +141,7 @@ void main()
            printf("\n\tThank you visiting our site. \n ");
         break;
     
-    default:printf("enter something valid \n ");
-        break;
+    default:printf("enter something valid \n "); goto label2;
     }
 
     
